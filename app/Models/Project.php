@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     protected $fillable = ['title', 'image', 'content', 'slogan'];
+
+
+    // assegno la relazione con le categorie
+    public function projects()
+    {
+        return $this->belongsTo(Project::class);
+    }
 }

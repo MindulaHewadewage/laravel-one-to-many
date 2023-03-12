@@ -17,10 +17,14 @@
                 <div class="card" style="width: 20rem;">
                     {{-- <img src="..." class="card-img-top" alt="..."> --}}
                     <div class="card-body">
-                        <h5 class="card-title">{{ $project->title }}</h5>
-                        {{-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p> --}}
+                        <div class="card-text d-flex justify-content-between">
+                            <h5 class="card-title">{{ $project->title }}</h5>
+                            <h5 class="card-category">
+                                {{ $project->type?->label }}
+
+                            </h5>
+
+                        </div>
                         @if ($project->image)
                             <img class="index-img my-3" src="{{ asset('storage/' . $project->image) }}"
                                 alt="{{ $project->title }}">

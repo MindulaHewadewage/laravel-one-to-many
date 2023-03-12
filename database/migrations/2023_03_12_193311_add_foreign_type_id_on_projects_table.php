@@ -17,6 +17,9 @@ return new class extends Migration
 
             // definisco la relazione
             $table->foreign('type_id')->references('id')->on('types')->onDelete('set null');
+
+            // modo piu facile
+            $table->foreignId('type_id')->after('id')->nullable()->onDelete('set null')->constrained();
         });
     }
 
