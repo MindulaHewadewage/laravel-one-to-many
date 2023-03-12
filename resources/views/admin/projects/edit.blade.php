@@ -32,8 +32,23 @@
                 </div>
             </div>
 
+
+            {{-- TYPE --}}
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="type_id" class="form-label">Category:</label>
+                    <select class="form-select" name="type_id" id="type_id">
+                        <option value="">No Type </option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}">{{ $type->label }}</option>
+                        @endforeach
+
+                    </select>
+                </div>
+            </div>
+
             {{-- IMAGE --}}
-            <div class="col-10">
+            <div class="col-7">
                 <div class="mb-3">
                     <label for="image" class="form-label">Image:</label>
                     <input type="file" class="form-control" id="image" placeholder="Choose an image" name="image"
@@ -41,6 +56,7 @@
                 </div>
             </div>
 
+            {{-- PLACEHOLDER --}}
             <div class="col-2">
                 <div class="mb-3">
                     <img class="img-preview "
