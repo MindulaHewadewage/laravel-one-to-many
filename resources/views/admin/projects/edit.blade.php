@@ -34,13 +34,14 @@
 
 
             {{-- TYPE --}}
-            <div class="col-3">
+            <div class="col-4">
                 <div class="mb-3">
                     <label for="type_id" class="form-label">Category:</label>
                     <select class="form-select" name="type_id" id="type_id">
                         <option value="">No Type </option>
                         @foreach ($types as $type)
-                            <option value="{{ $type->id }}">{{ $type->label }}</option>
+                            <option @if ($project->type_id == $type->id) selected @endif value="{{ $type->id }}">
+                                {{ $type->label }}</option>
                         @endforeach
 
                     </select>
@@ -57,7 +58,7 @@
             </div>
 
             {{-- PLACEHOLDER --}}
-            <div class="col-2">
+            <div class="col-1">
                 <div class="mb-3">
                     <img class="img-preview "
                         src="{{ $project->image ? asset('storage/' . $project->image) : 'https://marcolanci.it/utils/placeholder.png' }}"

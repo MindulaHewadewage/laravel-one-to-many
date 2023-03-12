@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $fillable = ['title', 'image', 'content', 'slogan'];
+    protected $fillable = ['title', 'image', 'content', 'slogan', 'type_id'];
 
 
     // assegno la relazione con le categorie

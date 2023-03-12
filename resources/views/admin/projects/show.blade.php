@@ -7,6 +7,7 @@
 @section('content')
     <header>
         <h2 class="my-5">{{ $project->title }}</h2>
+        <p>{{ $project->type?->label }}</p>
     </header>
 
     <main class="d-flex">

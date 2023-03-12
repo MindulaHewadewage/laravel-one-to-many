@@ -31,8 +31,22 @@
                 </div>
             </div>
 
+            {{-- TYPE --}}
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="type_id" class="form-label">Category:</label>
+                    <select class="form-select" name="type_id" id="type_id">
+                        <option value="">No Type </option>
+                        @foreach ($types as $type)
+                            <option @if ($project->type_id == $type->id) selected @endif value="{{ $type->id }}">
+                        @endforeach
+
+                    </select>
+                </div>
+            </div>
+
             {{-- IMAGE --}}
-            <div class="col-11">
+            <div class="col-7">
                 <div class="mb-3">
                     <label for="image" class="form-label">Image:</label>
                     <input type="file" class="form-control" id="image" placeholder="Choose an image" name="image"
