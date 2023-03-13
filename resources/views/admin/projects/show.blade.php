@@ -5,9 +5,15 @@
 @section('title', 'Projects')
 
 @section('content')
-    <header>
-        <h2 class="my-5">{{ $project->title }}</h2>
-        <p>{{ $project->type?->label }}</p>
+    <header class="d-flex my-5 align-items-center">
+        <h2>{{ $project->title }}</h2>
+        <p class="card-type mt-2 ms-3">
+            @if ($project->type)
+                <span class="badge" style="background-color:{{ $project->type->color }}">{{ $project->type?->label }}</span>
+            @else
+                -
+            @endif
+        </p>
     </header>
 
     <main class="d-flex">

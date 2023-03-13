@@ -19,9 +19,14 @@
                     <div class="card-body">
                         <div class="card-text d-flex justify-content-between">
                             <h5 class="card-title">{{ $project->title }}</h5>
-                            <h5 class="card-type">
-                                {{ $project->type?->label }}
-                            </h5>
+                            <p class="card-type">
+                                @if ($project->type)
+                                    <span class="badge"
+                                        style="background-color:{{ $project->type->color }}">{{ $project->type?->label }}</span>
+                                @else
+                                    -
+                                @endif
+                            </p>
 
                         </div>
                         @if ($project->image)
