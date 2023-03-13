@@ -36,7 +36,7 @@
             {{-- TYPE --}}
             <div class="col-4">
                 <div class="mb-3">
-                    <label for="type_id" class="form-label">Category:</label>
+                    <label for="type_id" class="form-label">Type:</label>
                     <select class="form-select" name="type_id" id="type_id">
                         <option value="">No Type </option>
                         @foreach ($types as $type)

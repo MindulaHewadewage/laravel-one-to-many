@@ -19,9 +19,8 @@
                     <div class="card-body">
                         <div class="card-text d-flex justify-content-between">
                             <h5 class="card-title">{{ $project->title }}</h5>
-                            <h5 class="card-category">
+                            <h5 class="card-type">
                                 {{ $project->type?->label }}
-
                             </h5>
 
                         </div>

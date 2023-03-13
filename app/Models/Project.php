@@ -11,8 +11,8 @@ class Project extends Model
 
 
     // assegno la relazione con le categorie
-    public function projects()
+    public function type()
     {
-        return $this->belongsTo(Project::class);
+        return $this->belongsTo(Type::class);
     }
 }
